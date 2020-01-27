@@ -1,4 +1,4 @@
-package it.objectmethod.loginJpa.entities;
+package it.objectmethod.login.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

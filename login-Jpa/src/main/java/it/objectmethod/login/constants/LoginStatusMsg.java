@@ -1,4 +1,4 @@
-package it.objectmethod.loginJpa.statsMsg;
+package it.objectmethod.login.constants;
 
 public enum LoginStatusMsg{
 	

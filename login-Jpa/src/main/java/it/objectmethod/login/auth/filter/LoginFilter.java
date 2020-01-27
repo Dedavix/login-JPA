@@ -1,4 +1,4 @@
-package it.objectmethod.loginJpa.auth.filter;
+package it.objectmethod.login.auth.filter;
 
 import java.io.IOException;
 
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import it.objectmethod.loginJpa.auth.tables.AuthenticateTable;
+import it.objectmethod.login.auth.tables.AuthenticateTable;
 
 @Component
 public class LoginFilter implements Filter {

@@ -1,11 +1,11 @@
-package it.objectmethod.loginJpa.auth.tables;
+package it.objectmethod.login.auth.tables;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Component;
 
-import it.objectmethod.loginJpa.entities.User;
+import it.objectmethod.login.entities.User;
 
 @Component
 public class AuthenticateTable {
