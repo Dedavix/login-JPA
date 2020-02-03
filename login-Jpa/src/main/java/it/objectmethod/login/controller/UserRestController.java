@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import it.objectmethod.login.auth.tables.AuthenticateTable;
 import it.objectmethod.login.constants.LoginStatusMsg;
 import it.objectmethod.login.entities.User;

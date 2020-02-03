@@ -27,6 +27,8 @@ public class CORSFilter implements Filter {
 				"GET, OPTIONS, HEAD, PUT, POST");
 		((HttpServletResponse) servletResponse).addHeader("Access-Control-Allow-Headers", "token");
 		((HttpServletResponse) servletResponse).addHeader("Access-Control-Expose-Headers", "token");
+		((HttpServletResponse) servletResponse).addHeader("Access-Control-Allow-Headers", "admin");
+		((HttpServletResponse) servletResponse).addHeader("Access-Control-Expose-Headers", "admin");
 		
 
 		HttpServletResponse resp = (HttpServletResponse) servletResponse;
