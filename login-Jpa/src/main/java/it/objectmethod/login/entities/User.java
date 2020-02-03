@@ -26,6 +26,17 @@ public class User {
 	
 	@Column(name = "password")
 	private String password;
+	
+	@Column(name="admin")
+	private Boolean admin;
+
+	public Boolean getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(Boolean admin) {
+		this.admin = admin;
+	}
 
 	public int getId() {
 		return id;
