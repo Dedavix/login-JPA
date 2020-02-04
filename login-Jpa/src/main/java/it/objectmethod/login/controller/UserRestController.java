@@ -28,20 +28,19 @@ public class UserRestController {
 	public AuthenticateTable tokenTable;
 
 	@PostMapping("/signin")
-	public ResponseEntity<String> getUser(@RequestParam(value = "email", required = true) String email,
+	public ResponseEntity<User> getUser(@RequestParam(value = "email", required = true) String email,
 			@RequestParam(value = "password", required = true) String password) {
 		User user = null;
 		HttpHeaders responseHeaders = new HttpHeaders();
 		user = userRepo.findByEmailAndPassword(email, password);
-		ResponseEntity<String> response = null;
+		ResponseEntity<User> response = null;
 		if (user == null) {
-			response = ResponseEntity.badRequest().body(LoginStatusMsg.KO_LOGIN.toString());
+			response = ResponseEntity.badRequest().body(user);
 		} else {
 			String uniqueID = UUID.randomUUID().toString();
 			tokenTable.getAuthTable().put(uniqueID, user);
 			responseHeaders.set("token", uniqueID);
-			responseHeaders.set("admin",user.getAdmin().toString());
-			response = ResponseEntity.ok().headers(responseHeaders).body(LoginStatusMsg.OK_LOGIN.toString());
+			response = ResponseEntity.ok().headers(responseHeaders).body(user);
 		}
 		return response;
 	}
